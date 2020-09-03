@@ -1,0 +1,86 @@
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1599120747.7504191,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ninjabuggs-php-test-master-hjpqh-wm85d[0m
+{"level":"info","ts":1599120761.342773,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/NinjaBuggs/php-test.git @ v0.0.1 in path /workspace/source"}
+{"level":"warn","ts":1599120761.3431125,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1599120761.376697,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:
+WARNING: no SHAs to merge, falling back to initial cloned commit
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-jx-git-credentials[0m
+Generated Git credentials file /workspace/xdg_config/git/credentials
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+E0903 08:12:46.114929       8 aws_credentials.go:77] while getting AWS credentials NoCredentialProviders: no valid providers in chain. Deprecated.
+	For verbose messaging see aws.Config.CredentialsChainVerboseErrors
+[36mINFO[0m[0001] Using dockerignore file: /workspace/source/.dockerignore 
+[36mINFO[0m[0001] Retrieving image manifest php:7.0-apache     
+E0903 08:12:47.305672       8 metadata.go:154] while reading 'google-dockercfg' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg
+E0903 08:12:47.310297       8 metadata.go:166] while reading 'google-dockercfg-url' metadata: http status code: 404 while fetching url http://metadata.google.internal./computeMetadata/v1/instance/attributes/google-dockercfg-url
+[36mINFO[0m[0003] Retrieving image manifest php:7.0-apache     
+[36mINFO[0m[0004] Built cross stage deps: map[]                
+[36mINFO[0m[0004] Retrieving image manifest php:7.0-apache     
+[36mINFO[0m[0006] Retrieving image manifest php:7.0-apache     
+[36mINFO[0m[0007] Executing 0 build triggers                   
+[36mINFO[0m[0007] Checking for cached layer gcr.io/test-infrstracture/cache:1f388e1f53bf7b442b26e90578dc60d70e3824d59c076ccc9222becb0153071b... 
+[36mINFO[0m[0008] No cached layer found for cmd COPY src/ /var/www/html 
+[36mINFO[0m[0008] cmd: EXPOSE                                  
+[36mINFO[0m[0008] Adding exposed port: 80/tcp                  
+[36mINFO[0m[0008] Unpacking rootfs as cmd COPY src/ /var/www/html requires it. 
+[36mINFO[0m[0027] COPY src/ /var/www/html                      
+[36mINFO[0m[0027] Resolving 2 paths                            
+[36mINFO[0m[0027] Taking snapshot of files...                  
+[36mINFO[0m[0027] EXPOSE 80                                    
+[36mINFO[0m[0027] cmd: EXPOSE                                  
+[36mINFO[0m[0027] Adding exposed port: 80/tcp                  
+[36mINFO[0m[0027] No files changed in this command, skipping snapshotting. 
+[36mINFO[0m[0027] Pushing layer gcr.io/test-infrstracture/cache:1f388e1f53bf7b442b26e90578dc60d70e3824d59c076ccc9222becb0153071b to cache now 
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-build-post-build[0m
+no CVE provider running in the current ** namespace so skip adding image to be analysed
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-changelog[0m
+Converted /workspace/source/charts/php-test to an unshallow repository
+Generating change log from git ref 52d9c315756d0944d2272e46b897266b55c98885 => 20274189f03d0d1006646f005b5eb56c0757538d
+Associating user alexandr-abashyn in users.jenkins.io with email alexandr.abashyn@gmail.com to git GitProvider user with login alexandr.abashyn-0 as emails match
+Adding label jenkins.io/git-github-userid=alexandr.abashyn-0 to user alexandr-abashyn in users.jenkins.io
+Finding issues in commit messages using git format
+WARNING: No release found for NinjaBuggs/php-test and tag v0.0.1 so creating a new release
+Updated the release information at https://github.com/NinjaBuggs/php-test/releases/tag/v0.0.1
+generated: /workspace/source/charts/php-test/templates/release.yaml
+Created Release php-test-0-0-1 resource in namespace **
+Updating PipelineActivity ninjabuggs-php-test-master-1 with version 0.0.1
+Updated PipelineActivities ninjabuggs-php-test-master-1 with release notes URL: https://github.com/NinjaBuggs/php-test/releases/tag/v0.0.1
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-helm-release[0m
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Adding missing Helm repo: storage.googleapis.com https://storage.googleapis.com/chartmuseum.jenkins-x.io
+Successfully added Helm repository storage.googleapis.com.
+Adding missing Helm repo: jenkins-x-chartmuseum http://jenkins-x-chartmuseum:8080
+Successfully added Helm repository jenkins-x-chartmuseum.
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Uploading chart file php-test-0.0.1.tgz to http://jenkins-x-chartmuseum:8080/api/charts
+Received 201 response: {"saved":true}
+
+Showing logs for build [32mninjabuggs-php-test-master-hjpqh-1[0m stage [32mfrom-build-pack[0m and container [32mstep-promote-jx-promote[0m
+WARNING: prow based install so skip waiting for the merge of Pull Requests to go green as currently there is an issue with gettingstatuses from the PR, see https://github.com/jenkins-x/**/issues/2410
+WARNING: No $CHART_REPOSITORY defined so using the default value of: http://jenkins-x-chartmuseum:8080
+Promoting app php-test version 0.0.1 to namespace **-staging
+Created Pull Request: https://github.com/NinjaBuggs/environment-travelix-cluster-staging/pull/1
+Added label updatebot to Pull Request https://github.com/NinjaBuggs/environment-travelix-cluster-staging/pull/1
+got git provider status pending from PR https://github.com/NinjaBuggs/environment-travelix-cluster-staging/pull/1
+got git provider status pending from PR https://github.com/NinjaBuggs/environment-travelix-cluster-staging/pull/1
+got git provider status pending from PR https://github.com/NinjaBuggs/environment-travelix-cluster-staging/pull/1
+Pull Request https://github.com/NinjaBuggs/environment-travelix-cluster-staging/pull/1 is merged at sha 6d37f7723323746d27664b352b44655929562c03
+Pull Request merged but we are not waiting for the update pipeline to complete!
+WARNING: Could not find the service URL in namespace **-staging for names php-test, **-php-test, **-staging-php-test
