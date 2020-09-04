@@ -1,0 +1,35 @@
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mcredential-initializer[0m
+{"level":"info","ts":1599237985.7299244,"caller":"creds-init/main.go:44","msg":"Credentials initialized."}
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mworking-dir-initializer[0m
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mplace-tools[0m
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mstep-git-source-ninjabuggs-php-test-pr-1-pr-bui-24frw-crmgp[0m
+{"level":"info","ts":1599237997.7578843,"caller":"git/git.go:105","msg":"Successfully cloned https://github.com/NinjaBuggs/php-test.git @ master in path /workspace/source"}
+{"level":"warn","ts":1599237997.7581923,"caller":"git/git.go:152","msg":"Unexpected error: creating symlink: symlink /tekton/home/.ssh /root/.ssh: file exists"}
+{"level":"info","ts":1599237997.7917626,"caller":"git/git.go:133","msg":"Successfully initialized and updated submodules in path /workspace/source"}
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mstep-setup-builder-home[0m
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mstep-git-merge[0m
+Using SHAs from PULL_REFS=master:c9ae7f0855961768856847b52f1305faaca11cd1,1:6fe8cc9706137ab88b1f9e302960fc6bee31b0eb
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git fetch origin --unshallow 6fe8cc9706137ab88b1f9e302960fc6bee31b0eb: c9ae7f0855961768856847b52f1305faaca11cd1:
+DEBUG: ran git fetch --unshallow origin 6fe8cc9706137ab88b1f9e302960fc6bee31b0eb: c9ae7f0855961768856847b52f1305faaca11cd1: in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git branch
+DEBUG: JX_LOG_LEVEL=error LC_ALL=C git checkout master
+DEBUG: ran git checkout master in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git reset --hard c9ae7f0855961768856847b52f1305faaca11cd1
+DEBUG: ran git reset --hard c9ae7f0855961768856847b52f1305faaca11cd1 in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git clean -fd .
+DEBUG: ran clean --force -d . in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git merge 6fe8cc9706137ab88b1f9e302960fc6bee31b0eb
+DEBUG: ran git merge 6fe8cc9706137ab88b1f9e302960fc6bee31b0eb in 
+DEBUG: LC_ALL=C JX_LOG_LEVEL=error git log --format=%H%x1f%an%x1f%ae%x1f%cn%x1f%ce%x1f%s%n%b%x1e c9ae7f0855961768856847b52f1305faaca11cd1..HEAD
+Merged SHA 6fe8cc9706137ab88b1f9e302960fc6bee31b0eb with commit message 'First commit' into base branch master
+
+Showing logs for build [32mninjabuggs-php-test-pr-1-pr-bui-24frw-5-jlvgj[0m stage [32mfrom-build-pack[0m and container [32mstep-build-container-build[0m
+2020/09/04 16:46:44 Error executing command: fork/exec /busybox/sh: permission denied
+[31m
+Pipeline failed on stage 'from-build-pack' : container 'step-build-container-build'. The execution of the pipeline has stopped.[0m
